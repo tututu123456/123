@@ -1,0 +1,12 @@
+from collections import OrderedDict
+words = OrderedDict()
+def printWords(words):
+    #start
+    for k,v in words.items():
+        print(k+":"+v)
+    #end
+for i in range(3):
+    types=(input())[0:-1]
+    mean=(input())[0:-1]
+    words[types]=mean
+printWords(words)

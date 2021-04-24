@@ -1,0 +1,50 @@
+class Person(object):
+ 
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+ 
+class Student(Person):
+ 
+    def __init__(self, name, gender, score):
+        super(Student, self).__init__(name, gender)
+        self.score = score
+ 
+class Teacher(Person):
+ 
+    def __init__(self, name, gender, course):
+        super(Teacher, self).__init__(name, gender)
+        self.course = course
+ 
+t = Teacher('Alice', 'Female', 'English')
+p = Person('Tim','Male')
+ 
+print isinstance(t,Person)   # True
+print isinstance(t,Student)  # False
+print isinstance(t,Teacher)  # True
+print isinstance(t,object)   # True
+ 
+print isinstance(p,Student)  # False
+print isinstance(p,Teacher)  # False
+
+
+--多态
+
+def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+    def whoAmI(self):
+        return 'I am a Person, my name is %s' % self.name
+ 
+class Student(Person):
+    def __init__(self, name, gender, score):
+        super(Student, self).__init__(name, gender)
+        self.score = score
+    def whoAmI(self):
+        return 'I am a Student, my name is %s' % self.name
+ 
+p = Person('Tim', 'Male')
+s = Student('Bob', 'Male', 88)
+ 
+who_am_i(p)  # I am a Person, my name is Tim
+who_am_i(s)  # I am a Student, my name is Bob

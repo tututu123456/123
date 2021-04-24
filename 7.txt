@@ -1,0 +1,4 @@
+set1 = {'a', 'z', 'b', 4, 6, 1}
+set1.add(8)
+set1.add('hello')
+print(set1)

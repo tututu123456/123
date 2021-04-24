@@ -1,0 +1,22 @@
+class CumtomException(Exception):
+    def __init__(self,msg):
+        self.msg=msg
+class Person:
+   def __init__(self):
+       self.__age=0
+   def setAge(self,age):
+       if 0<=age<=100:
+           self.__age=age
+       else:
+           raise CumtomException("exception")
+   def getAge(self):
+       return self.__age
+   def __str__(self):
+       return "age is "+str(self.__age)
+if __name__ == '__main__':
+    person=Person()
+    try:
+        person.setAge(int(input()))
+        print(person)
+    except Exception as result:
+        print(result)

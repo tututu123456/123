@@ -1,0 +1,28 @@
+set1 = {'a', 'z', 'b', 4, 6, 1}
+ys = set1.pop()
+print('set1集合：', set1)
+print('删除的元素：', ys)
+
+
+删除集合中指定的元素，如果该集合内没有该元素就报错
+
+
+set1 = {'a', 'z', 'b', 4, 6, 1}
+set1.remove('a')
+print(set1)
+set1.remove('x')
+print(set1)
+
+
+删除集合中指定的元素，如果该集合内没有该元素也不会报错
+
+
+set1 = {'a', 'z', 'b', 4, 6, 1}
+set1.discard('a')
+print(set1)
+set1.discard('y')
+print(set1)
+ 
+# 执行结果：
+# {1, 4, 6, 'b', 'z'}
+# {1, 4, 6, 'b', 'z'}

@@ -1,0 +1,13 @@
+class Cone:
+ def __init__(self):
+  self.r=0.0
+  self.height=0.0
+ def getArea(self):
+  return 3.14*self.r*self.r
+ def getVolume(self):
+  return self.getArea()*self.height
+if __name__ == '__main__':
+ cone=Cone()
+ cone.r=float(input())
+ cone.height=float(input())
+ print("area is %.2f,volume is %.2f"%(cone.getArea(),cone.getVolume()))
